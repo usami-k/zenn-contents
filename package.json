@@ -1,0 +1,11 @@
+{
+  "name": "zenn-contents",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usami-k/zenn-contents.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "zenn-cli": "*"
+  }
+}
