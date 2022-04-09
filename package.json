@@ -6,6 +6,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "zenn-cli": "*"
+    "zenn-cli": "*",
+    "textlint": "*",
+    "textlint-rule-preset-ja-spacing": "*",
+    "textlint-rule-preset-ja-technical-writing": "*"
   }
 }

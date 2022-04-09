@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "preset-ja-spacing": {},
+    "preset-ja-technical-writing": {}
+  }
+}
