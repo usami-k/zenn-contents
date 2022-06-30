@@ -6,9 +6,15 @@
   },
   "license": "MIT",
   "dependencies": {
+    "zenn-cli": "*"
+  },
+  "devDependencies": {
     "textlint": "*",
     "textlint-rule-preset-ja-spacing": "*",
-    "textlint-rule-preset-ja-technical-writing": "*",
-    "zenn-cli": "*"
+    "textlint-rule-preset-ja-technical-writing": "*"
+  },
+  "volta": {
+    "node": "16.15.1",
+    "yarn": "1.22.19"
   }
 }
