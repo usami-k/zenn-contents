@@ -749,7 +749,7 @@ has-property-descriptors@^1.0.0:
   dependencies:
     get-intrinsic "^1.1.1"
 
-has-symbols@^1.0.1, has-symbols@^1.0.2, has-symbols@^1.0.3:
+has-symbols@^1.0.2, has-symbols@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.3.tgz#bb7b2c4349251dce87b125f7bdf874aa7c8b39f8"
   integrity sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A==
@@ -1422,13 +1422,13 @@ object-keys@^1.1.1:
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
 
 object.assign@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.2.tgz#0ed54a342eceb37b38ff76eb831a0e788cb63940"
-  integrity sha512-ixT2L5THXsApyiUPYKmW+2EHpXXe5Ii3M+f4e+aJFAHao5amFRW6J0OO6c/LU8Be47utCx2GL89hxGB6XSmKuQ==
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.4.tgz#9673c7c7c351ab8c4d0b516f4343ebf4dfb7799f"
+  integrity sha512-1mxKf0e58bvyjSCtKYY4sRe9itRk3PJpquJOjeIkz885CczcI4IvJJDLPS72oowuSh+pBxUFROpX+TU++hxhZQ==
   dependencies:
-    call-bind "^1.0.0"
-    define-properties "^1.1.3"
-    has-symbols "^1.0.1"
+    call-bind "^1.0.2"
+    define-properties "^1.1.4"
+    has-symbols "^1.0.3"
     object-keys "^1.1.1"
 
 object_values@^0.1.2:
@@ -2087,9 +2087,9 @@ textlint-rule-no-double-negative-ja@^2.0.0:
     kuromojin "^3.0.0"
 
 textlint-rule-no-doubled-conjunction@^2.0.1:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-conjunction/-/textlint-rule-no-doubled-conjunction-2.0.3.tgz#5291a5a52a9030ad9146392af347f0498e47a355"
-  integrity sha512-sM7hEndsiyzr0nxldGHwdXHmWwqNSCdtyYOyZ4rQYYhMR2gropvcQSJI6FULs0k74v1qRqC5UIsFqB+Sw4hzkA==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-conjunction/-/textlint-rule-no-doubled-conjunction-2.0.4.tgz#ff36ce32afd71a05ed7655359e1721da2cb32c54"
+  integrity sha512-GUpZgJoEYk1EsqoE+0bcdln8ZbH6UDK9TWld3E2II+lGMw/0ALkoTNXhAsNK1ST/M7zYEX6a5qOCN68t2grDaA==
   dependencies:
     kuromojin "^3.0.0"
     sentence-splitter "^3.2.2"
@@ -2530,9 +2530,9 @@ xtend@^4.0.0, xtend@^4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 zenn-cli@*:
-  version "0.1.116"
-  resolved "https://registry.yarnpkg.com/zenn-cli/-/zenn-cli-0.1.116.tgz#69b8e9bdfebdd36e1872e545fd898e83eb3f4865"
-  integrity sha512-EvbhNl7G+rIpzh+JWC4FJM3mre+fAJoKFwq7kc7u82hR5QKjwxNfdJN1OMdf1RZrl3+PjUHA4etaAf2fVn/ucQ==
+  version "0.1.117"
+  resolved "https://registry.yarnpkg.com/zenn-cli/-/zenn-cli-0.1.117.tgz#5c0c33ae75fbbc986e05656a296d543cf4df1c55"
+  integrity sha512-1IvPRwB+cTRl3R+5MgdFm6h++c3xzRTzrtxX5KRq2M7+AB2dF1hWBqwTS8n+u/edkTZxhXQJi94Uw8cbMdXGfg==
 
 zlibjs@^0.3.1:
   version "0.3.1"
