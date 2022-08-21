@@ -1,6 +1,15 @@
 {
+  "filters": {
+    "comments": true
+  },
   "rules": {
     "preset-ja-spacing": {},
-    "preset-ja-technical-writing": {}
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "allowPeriodMarks": [
+          ":::"
+        ]
+      }
+    }
   }
 }

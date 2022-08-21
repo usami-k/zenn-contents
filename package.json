@@ -11,7 +11,8 @@
   "devDependencies": {
     "textlint": "*",
     "textlint-rule-preset-ja-spacing": "*",
-    "textlint-rule-preset-ja-technical-writing": "*"
+    "textlint-rule-preset-ja-technical-writing": "*",
+    "textlint-filter-rule-comments": "*"
   },
   "volta": {
     "node": "16.15.1",
