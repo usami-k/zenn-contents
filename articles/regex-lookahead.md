@@ -4,6 +4,7 @@ emoji: "👀"
 type: "tech"
 topics: ["正規表現"]
 published: true
+publication: yumemi_inc
 ---
 
 正規表現の「先読み（lookahead）」「後読み（lookbehind）」について紹介します。
