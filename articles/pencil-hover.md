@@ -3,7 +3,7 @@ title: "Apple Pencil のホバー機能を試す"
 emoji: "🖊️"
 type: "tech"
 topics: ["ApplePencil","iPadOS","iOS","Swift"]
-published: false
+published: true
 ---
 
 2022年10月に発売された最新のiPad Proでは、Apple Pencilのホバー状態（iPad Proに直接タッチしておらず少し浮かせている状態）を検出できるようになりました。この機能は、サードパーティ製のアプリでも利用できます。
