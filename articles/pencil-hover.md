@@ -60,7 +60,7 @@ private func hovering(_ recognizer: UIHoverGestureRecognizer) {
 
 # zOffset
 
-`UIHoverGestureRecognizer` プロパティ [`zOffset`](https://developer.apple.com/documentation/uikit/uihovergesturerecognizer/4098402-zoffset) がiPad16.1で追加されました。
+`UIHoverGestureRecognizer` プロパティ [`zOffset`](https://developer.apple.com/documentation/uikit/uihovergesturerecognizer/4098402-zoffset) がiPadOS 16.1で追加されました。
 
 * 0〜1の値でタッチパネルからの距離が取得できる
 * Apple Pencilでない場合は常に0の値
