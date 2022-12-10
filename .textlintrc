@@ -1,15 +1,19 @@
 {
   "filters": {
-    "comments": true
+    "comments": true,
+    "allowlist": {
+      "allow": [
+        ":::"
+      ]
+    }
   },
   "rules": {
-    "preset-ja-spacing": {},
-    "preset-ja-technical-writing": {
-      "ja-no-mixed-period": {
-        "allowPeriodMarks": [
-          ":::"
-        ]
-      }
+    "preset-ja-technical-writing": true,
+    "preset-ja-spacing": true,
+    "prh": {
+      "rulePaths": [
+        "./node_modules/textlint-rule-preset-icsmedia/dict/prh.yml"
+      ]
     }
   }
 }
