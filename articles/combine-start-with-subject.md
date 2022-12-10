@@ -6,7 +6,7 @@ topics: ["swift", "combine", "xcode", "mac", "ios"]
 published: true
 ---
 
-初めてCombineを学ぶ人向けに「[Combineをはじめよう](https://zenn.dev/usamik26/books/a5883603f0260e446698)」という本を書きました。この記事では、その本についての補足のような内容（あるいは裏話のような内容）を書きます。
+はじめてCombineを学ぶ人向けに「[Combineをはじめよう](https://zenn.dev/usamik26/books/a5883603f0260e446698)」という本を書きました。この記事では、その本についての補足のような内容（あるいは裏話のような内容）を書きます。
 
 # Combineをはじめる敷居を下げる
 
