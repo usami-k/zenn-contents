@@ -3,7 +3,7 @@ title: "正規表現とオートマトン"
 emoji: "🤖"
 type: "tech"
 topics: ["正規表現"]
-published: false
+published: true
 publication_name: "yumemi_inc"
 ---
 
@@ -350,3 +350,7 @@ NFA から DFA に変換するのは機械的なアルゴリズムで行えま�
 <!-- textlint-enable -->
 
 ε-遷移を除去する際の ε-閉包の考え方は前者の書籍によります。後者の書籍では、ε-遷移を除去する際に ε-展開というアルゴリズムを用いています。少し考え方が異なるものの、同様の変換結果となります。
+
+## 宣伝
+
+本記事は技術書典で配布している「[ゆめみ大技林 '23](https://techbookfest.org/product/pTZvmVyZJG2Mjyqs9SUWdd)」に収録しています。他のメンバーの記事もありますので、ぜひご覧ください。
