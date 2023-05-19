@@ -1,0 +1,253 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{automata,arrows.meta,positioning}
+\usepackage[active,tightpage]{preview}
+\begin{document}
+
+\begin{preview}
+    \rule{20pt}{0pt}
+    \begin{tikzpicture}[node distance = 2cm, on grid, auto, font=\ttfamily]
+        \node (q0) [state, initial, initial text=\textrm{start}] {$q_0$};
+        \node (q1) [state, right = of q0] {$q_1$};
+        \node (q2) [state, accepting, right = of q1] {$q_2$};
+        \path [-stealth, thick]
+        (q0) edge node {a} (q1)
+        (q1) edge node {b} (q2)
+        (q2) edge [loop above] node {a} ()
+        ;
+    \end{tikzpicture}
+    \rule{20pt}{0pt}
+\end{preview}
+
+\begin{preview}
+    \rule{10pt}{0pt}
+    \begin{tikzpicture}[node distance = 2cm, on grid, auto, font=\ttfamily]
+        \node (q0) [state, initial, initial text=\textrm{start}] {$q_0$};
+        \node (q1) [state, right = of q0] {$q_1$};
+        \node (q2) [state, right = of q1] {$q_2$};
+        \node (q3) [state, accepting, right = of q2] {$q_3$};
+        \path [-stealth, thick]
+        (q0) edge node {a} (q1)
+        (q1) edge node {b,c} (q2)
+        (q2) edge [loop above] node {b,c} ()
+        (q2) edge node {d} (q3)
+        ;
+    \end{tikzpicture}
+    \rule{10pt}{0pt}
+\end{preview}
+
+\begin{preview}
+    \rule{50pt}{0pt}
+    \begin{tikzpicture}[node distance = 1.5cm, on grid, auto, font=\ttfamily]
+        \node (q0) [state] {};
+        \node (q1) [state, right = of q0] {};
+        \node (q2) [state, above right = of q1] {};
+        \node (q3) [state, right = of q2] {};
+        \node (q4) [state, below right = of q1] {};
+        \node (q5) [state, right = of q4] {};
+        \node (q6) [state, below right = of q3] {};
+        \node (q7) [state, right = of q6] {};
+        \path [-stealth, thick]
+        (q0) edge node {a} (q1)
+        (q2) edge node {b} (q3)
+        (q4) edge node {c} (q5)
+        (q6) edge node {d} (q7)
+        ;
+    \end{tikzpicture}
+    \rule{50pt}{0pt}
+\end{preview}
+
+\begin{preview}
+    \rule{10pt}{0pt}
+    \begin{tikzpicture}[node distance = 1.5cm, on grid, auto, font=\ttfamily]
+        \node (q0) [state] {};
+        \node (q1) [state, right = of q0] {};
+        \node (q8) [state, right = of q1] {};
+        \node (q2) [state, above right = of q8] {};
+        \node (q3) [state, right = of q2] {};
+        \node (q4) [state, below right = of q8] {};
+        \node (q5) [state, right = of q4] {};
+        \node (q9) [state, below right = of q3] {};
+        \node (q6) [state, right = of q9] {};
+        \node (q7) [state, right = of q6] {};
+        \path [-stealth, thick]
+        (q0) edge node {a} (q1)
+        (q8) edge node {$\varepsilon$} (q2)
+        (q8) edge [below left] node {$\varepsilon$} (q4)
+        (q2) edge node {b} (q3)
+        (q4) edge node {c} (q5)
+        (q3) edge node {$\varepsilon$} (q9)
+        (q5) edge [below right] node {$\varepsilon$} (q9)
+        (q6) edge node {d} (q7)
+        ;
+    \end{tikzpicture}
+    \rule{10pt}{0pt}
+\end{preview}
+
+\begin{preview}
+    \rule{10pt}{0pt}
+    \begin{tikzpicture}[node distance = 1.5cm, on grid, auto, font=\ttfamily]
+        \node (q0) [state] {};
+        \node (q1) [state, right = of q0] {};
+        \node (q8) [state, right = of q1] {};
+        \node (q2) [state, above right = of q8] {};
+        \node (q3) [state, right = of q2] {};
+        \node (q4) [state, below right = of q8] {};
+        \node (q5) [state, right = of q4] {};
+        \node (q9) [state, below right = of q3] {};
+        \node (q6) [state, right = of q9] {};
+        \node (q7) [state, right = of q6] {};
+        \path [-stealth, thick]
+        (q0) edge node {a} (q1)
+        (q8) edge node {$\varepsilon$} (q2)
+        (q8) edge [below left] node {$\varepsilon$} (q4)
+        (q2) edge node {b} (q3)
+        (q4) edge node {c} (q5)
+        (q3) edge node {$\varepsilon$} (q9)
+        (q5) edge [below right] node {$\varepsilon$} (q9)
+        (q9) edge [above] node {$\varepsilon$} (q8)
+        (q6) edge node {d} (q7)
+        ;
+    \end{tikzpicture}
+    \rule{10pt}{0pt}
+\end{preview}
+
+\begin{preview}
+    \begin{tikzpicture}[node distance = 1.5cm, on grid, auto, font=\ttfamily]
+        \node (q0) [state, initial, initial text=\textrm{start}] {};
+        \node (q1) [state, right = of q0] {};
+        \node (q8) [state, right = of q1] {};
+        \node (q2) [state, above right = of q8] {};
+        \node (q3) [state, right = of q2] {};
+        \node (q4) [state, below right = of q8] {};
+        \node (q5) [state, right = of q4] {};
+        \node (q9) [state, below right = of q3] {};
+        \node (q6) [state, right = of q9] {};
+        \node (q7) [state, accepting, right = of q6] {};
+        \path [-stealth, thick]
+        (q0) edge node {a} (q1)
+        (q1) edge node {$\varepsilon$} (q8)
+        (q8) edge node {$\varepsilon$} (q2)
+        (q8) edge [below left] node {$\varepsilon$} (q4)
+        (q2) edge node {b} (q3)
+        (q4) edge node {c} (q5)
+        (q3) edge node {$\varepsilon$} (q9)
+        (q5) edge [below right] node {$\varepsilon$} (q9)
+        (q9) edge [above] node {$\varepsilon$} (q8)
+        (q9) edge node {$\varepsilon$} (q6)
+        (q6) edge node {d} (q7)
+        ;
+    \end{tikzpicture}
+\end{preview}
+
+\begin{preview}
+    \begin{flushright}
+        \scalebox{0.8}{
+            \begin{tikzpicture}[node distance = 1.5cm, on grid, auto, font=\ttfamily, fill=lightgray]
+                \node (q0) [state] {};
+                \node (q1) [state, right = of q0] {};
+                \node (q8) [state, fill, right = of q1] {};
+                \node (q2) [state, fill, above right = of q8] {};
+                \node (q3) [state, fill=darkgray, right = of q2] {};
+                \node (q4) [state, fill, below right = of q8] {};
+                \node (q5) [state, right = of q4] {};
+                \node (q9) [state, fill, below right = of q3] {};
+                \node (q6) [state, fill, right = of q9] {};
+                \node (q7) [state, right = of q6] {};
+                \path [-stealth, thick]
+                (q8) edge node {$\varepsilon$} (q2)
+                (q8) edge [below left] node {$\varepsilon$} (q4)
+                (q3) edge node {$\varepsilon$} (q9)
+                (q9) edge [above] node {$\varepsilon$} (q8)
+                (q9) edge node {$\varepsilon$} (q6)
+                ;
+            \end{tikzpicture}
+        }
+    \end{flushright}
+
+    \scalebox{0.8}{
+        \begin{tikzpicture}[node distance = 1.5cm, on grid, auto, font=\ttfamily, fill=lightgray]
+            \node (q0) [state] {};
+            \node (q1) [state, fill=darkgray, right = of q0] {};
+            \node (q8) [state, fill, right = of q1] {};
+            \node (q2) [state, fill, above right = of q8] {};
+            \node (q3) [state, right = of q2] {};
+            \node (q4) [state, fill, below right = of q8] {};
+            \node (q5) [state, right = of q4] {};
+            \node (q9) [state, below right = of q3] {};
+            \node (q6) [state, right = of q9] {};
+            \node (q7) [state, right = of q6] {};
+            \path [-stealth, thick]
+            (q1) edge node {$\varepsilon$} (q8)
+            (q8) edge node {$\varepsilon$} (q2)
+            (q8) edge [below left] node {$\varepsilon$} (q4)
+            ;
+        \end{tikzpicture}
+    }
+
+    \begin{flushright}
+        \scalebox{0.8}{
+            \begin{tikzpicture}[node distance = 1.5cm, on grid, auto, font=\ttfamily, fill=lightgray]
+                \node (q0) [state] {};
+                \node (q1) [state, right = of q0] {};
+                \node (q8) [state, fill, right = of q1] {};
+                \node (q2) [state, fill, above right = of q8] {};
+                \node (q3) [state, right = of q2] {};
+                \node (q4) [state, fill, below right = of q8] {};
+                \node (q5) [state, fill=darkgray, right = of q4] {};
+                \node (q9) [state, fill, below right = of q3] {};
+                \node (q6) [state, fill, right = of q9] {};
+                \node (q7) [state, right = of q6] {};
+                \path [-stealth, thick]
+                (q8) edge node {$\varepsilon$} (q2)
+                (q8) edge [below left] node {$\varepsilon$} (q4)
+                (q5) edge [below right] node {$\varepsilon$} (q9)
+                (q9) edge [above] node {$\varepsilon$} (q8)
+                (q9) edge node {$\varepsilon$} (q6)
+                ;
+            \end{tikzpicture}
+        }
+    \end{flushright}
+\end{preview}
+
+\begin{preview}
+    \rule{50pt}{0pt}
+    \begin{tikzpicture}[node distance = 2.0cm, on grid, auto, font=\ttfamily]
+        \node (q0) [state, initial, initial text=\textrm{start}] {};
+        \node (q1) [state, right = of q0] {};
+        \node (q3) [state, above right = of q1] {};
+        \node (q5) [state, below right = of q1] {};
+        \node (q7) [state, accepting, below right = of q3] {};
+        \path [-stealth, thick]
+        (q0) edge node {a} (q1)
+        (q1) edge node {b} (q3)
+        (q1) edge [below left] node {c} (q5)
+        (q3) edge [loop left] node {b} ()
+        (q3) edge [bend left] [left] node {c} (q5)
+        (q5) edge [loop left] node {c} ()
+        (q5) edge [bend left] [right] node {b} (q3)
+        (q3) edge node {d} (q7)
+        (q5) edge [below right] node {d} (q7)
+        ;
+    \end{tikzpicture}
+    \rule{50pt}{0pt}
+\end{preview}
+
+\begin{preview}
+    \rule{30pt}{0pt}
+    \begin{tikzpicture}[node distance = 2cm, on grid, auto, font=\ttfamily]
+        \node (q0) [state, initial, initial text=\textrm{start}] {};
+        \node (q1) [state, right = of q0] {};
+        \node (q3) [state, right = of q1] {};
+        \node (q7) [state, accepting, right = of q3] {};
+        \path [-stealth, thick]
+        (q0) edge node {a} (q1)
+        (q1) edge node {b,c} (q3)
+        (q3) edge [loop above] node {b,c} ()
+        (q3) edge node {d} (q7)
+        ;
+    \end{tikzpicture}
+    \rule{30pt}{0pt}
+\end{preview}
+
+\end{document}
