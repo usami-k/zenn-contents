@@ -6,7 +6,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "zenn-cli": "*"
+    "zenn-cli": "^0.1.144"
   },
   "devDependencies": {
     "textlint": "*",
@@ -15,9 +15,5 @@
     "textlint-rule-preset-icsmedia": "github:ics-creative/textlint-rule-preset-icsmedia",
     "textlint-rule-preset-ja-spacing": "*",
     "textlint-rule-preset-ja-technical-writing": "*"
-  },
-  "volta": {
-    "node": "16.15.1",
-    "yarn": "1.22.19"
   }
 }
