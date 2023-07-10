@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "yarn zenn preview",
+            "label": "npx zenn preview",
             "type": "shell",
-            "command": "yarn zenn preview"
+            "command": "npx zenn preview"
         }
     ]
 }
