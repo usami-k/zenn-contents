@@ -3,7 +3,8 @@ title: "@ViewLoadingプロパティラッパの紹介と自前で実装する方
 emoji: "🔍"
 type: "tech"
 topics: ["Swift","iOS","UIKit"]
-published: false
+published: true
+publication_name: "yumemi_inc"
 ---
 
 iOS 16.4で追加された `@ViewLoading` プロパティラッパについて紹介し、古いOSでも使えるように自前で実装する方法を述べます。
