@@ -4,7 +4,11 @@
         {
             "label": "npx zenn preview",
             "type": "shell",
-            "command": "npx zenn preview"
+            "command": "npx zenn preview",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
