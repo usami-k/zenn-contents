@@ -6,13 +6,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "zenn-cli": "^0.1.144"
+    "zenn-cli": "*"
   },
   "devDependencies": {
     "textlint": "*",
     "textlint-filter-rule-allowlist": "*",
     "textlint-filter-rule-comments": "*",
-    "textlint-rule-preset-icsmedia": "github:ics-creative/textlint-rule-preset-icsmedia",
     "textlint-rule-preset-ja-spacing": "*",
     "textlint-rule-preset-ja-technical-writing": "*"
   }
