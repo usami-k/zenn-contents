@@ -83,5 +83,6 @@ private func hovering(_ recognizer: UIHoverGestureRecognizer) {
 # 備考
 
 この記事はpotatotips #79で話した内容をもとにしています。
-[Apple Pencilのホバー機能を試す / pencil hover - Speaker Deck](https://speakerdeck.com/usamik26/pencil-hover)
+
+https://www.docswell.com/s/usami-k/5ENQN8-pencil-hover
 

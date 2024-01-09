@@ -281,4 +281,4 @@ https://github.com/danielpunkass/MagicLoading
 
 なお、この記事は先日のYUMEMI.grow Mobile #6で発表した内容を整理して記事の形にまとめたものです。
 
-https://speakerdeck.com/usamik26/at-viewloading-property-wrapper-implementation
+https://www.docswell.com/s/usami-k/ZDE96N-at-viewloading-property-wrapper-implementation

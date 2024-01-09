@@ -163,4 +163,4 @@ print $text;
 
 # 補足
 
-この記事は、[KyotoLT Online 第27回](https://kyotolt.connpass.com/event/252441/)で発表した内容（[正規表現の少し進んだ機能](https://speakerdeck.com/usamik26/regex-lookahead)）を記事の形に書き直したものです。
+この記事は、[KyotoLT Online 第27回](https://kyotolt.connpass.com/event/252441/)で発表した内容（[正規表現の少し進んだ機能](https://www.docswell.com/s/usami-k/58GRDQ-regex-lookahead)）を記事の形に書き直したものです。
