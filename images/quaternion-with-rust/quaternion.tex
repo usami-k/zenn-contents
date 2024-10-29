@@ -1,0 +1,173 @@
+\documentclass{jlreq}
+\usepackage{luatexja-fontspec}
+\setmainfont{STIX Two Text}
+\setsansfont{DejaVu Sans}
+\setmonofont{0xProto}
+\setmainjfont{YuKyo_Yoko-Medium}[BoldFont=YuKyo_Yoko-Bold]
+\setsansjfont{YuGo-Medium}[BoldFont=YuGo-Bold]
+\usepackage{mathtools}
+\usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+\unimathsetup{math-style=ISO,bold-style=ISO}
+\setmathfont{STIX Two Math}
+\mathtoolsset{showonlyrefs=true}
+\usepackage[active,tightpage]{preview}
+\newcommand{\ii}{\mathtt{i}}
+\newcommand{\jj}{\mathtt{j}}
+\newcommand{\kk}{\mathtt{k}}
+
+\begin{document}
+
+% 01
+\begin{preview}
+    \begin{equation}
+        w + x \ii + y \jj + z \kk
+    \end{equation}
+\end{preview}
+
+% 02
+\begin{preview}
+    \begin{gather}
+        \ii^2 = -1 \quad / \quad \jj^2 = -1 \quad / \quad \kk^2 = -1 \\
+        \ii \jj = \kk \quad / \quad \jj \kk = \ii \quad / \quad \kk \ii = \jj \quad / \quad \jj \ii = -\kk \quad / \quad \kk \jj = -\ii \quad / \quad \ii \kk = -\jj
+    \end{gather}
+\end{preview}
+
+% 03
+\begin{preview}
+    \begin{align}
+        (1 + 2 \ii + \jj + 4 \kk) + (5 + 3 \ii + 4 \jj - 2 \kk) & = 6 + 5 \ii + 5 \jj + 2 \kk \\
+        (5 + 6 \ii + 2 \jj - 3 \kk) - (3 + 2 \ii + 3 \jj + \kk) & = 2 + 4 \ii - \jj - 4 \kk
+    \end{align}
+\end{preview}
+
+% 04
+\begin{preview}
+    \begin{align}
+        (1 + 2 \ii)(3 \jj + 4 \kk) & = 1 (3 \jj + 4 \kk) + 2 \ii (3 \jj + 4 \kk) \\
+                                   & = 3 \jj + 4 \kk + 6 \ii \jj + 8 \ii \kk     \\
+                                   & = 3 \jj + 4 \kk + 6 \kk - 8 \jj             \\
+                                   & = -5 \jj + 10 \kk                           \\
+        (3 \jj + 4 \kk)(1 + 2 \ii) & = 3 \jj (1 + 2 \ii) + 4 \kk (1 + 2 \ii)     \\
+                                   & = 3 \jj + 6 \jj \ii + 4 \kk + 8 \kk \ii     \\
+                                   & = 3 \jj - 6 \kk + 4 \kk + 8 \jj             \\
+                                   & = 11 \jj - 2 \kk
+    \end{align}
+\end{preview}
+
+% 05
+\begin{preview}
+    \begin{equation}
+        (xz + x + y + z) \div (z + 1) = ?
+    \end{equation}
+\end{preview}
+
+% 06
+\begin{preview}
+    \begin{equation}
+        xz + x + y + z = (x + 1)(z + 1) + (y - 1)
+    \end{equation}
+\end{preview}
+
+% 07
+\begin{preview}
+    \begin{equation}
+        \frac{xz + x + y + z}{z + 1} = x + 1 + \frac{y - 1}{z + 1}
+    \end{equation}
+\end{preview}
+
+% 08
+\begin{preview}
+    \begin{equation}
+        w + x \ii + y \jj + z \kk
+    \end{equation}
+\end{preview}
+
+% 09
+\begin{preview}
+    \begin{align}
+        \alpha   & := w + x \ii + y \jj + z \kk  \\
+        \alpha^* & :=  w - x \ii - y \jj - z \kk
+    \end{align}
+\end{preview}
+
+% 10
+\begin{preview}
+    \begin{align}
+        \alpha \alpha^* & = (w + x \ii + y \jj + z \kk)(w - x \ii - y \jj - z \kk)  \\
+                        & = ww - wx \ii - wy \jj - wz \kk                           \\
+                        & \quad + x \ii w - x \ii x \ii - x \ii y \jj - x \ii z \kk \\
+                        & \quad + y \jj w - y \jj x \ii - y \jj y \jj - y \jj z \kk \\
+                        & \quad + z \kk w - z \kk x \ii - z \kk y \jj - z \kk z \kk \\
+                        & = w^2 - wx \ii - wy \jj - wz \kk                          \\
+                        & \quad + wx \ii + x^2 - xy \kk + xz \jj                    \\
+                        & \quad + wy \jj + xy \kk + y^2 - yz \ii                    \\
+                        & \quad + wz \kk - xz \jj + yz \ii + z^2                    \\
+                        & = w^2 + x^2 + y^2 + z^2
+    \end{align}
+\end{preview}
+
+% 11
+\begin{preview}
+    \begin{align}
+        |\alpha|   & := \sqrt{w^2 + x^2 + y^2 + z^2} \\
+        |\alpha|^2 & = w^2 + x^2 + y^2 + z^2
+    \end{align}
+\end{preview}
+
+% 12
+\begin{preview}
+    \begin{equation}
+        \alpha \left(\frac{1}{|\alpha|^2} \alpha^*\right) = 1
+    \end{equation}
+\end{preview}
+
+% 13
+\begin{preview}
+    \begin{align}
+        (1 + 2 \ii + 3 \jj + 4 \kk) \div (1 - \ii + \jj + \kk) & = (1 + 2 \ii + 3 \jj + 4 \kk) (1 - \ii + \jj + \kk)^{-1}        \\
+                                                               & = \frac{1}{4} (1 + 2 \ii + 3 \jj + 4 \kk) (1 + \ii - \jj - \kk) \\
+                                                               & = \frac{1}{4} (6 + 4 \ii + 8 \jj - 2 \kk)                       \\
+                                                               & = \frac{3}{2} + \ii + 2 \jj - \frac{1}{2} \kk
+    \end{align}
+\end{preview}
+
+% 14
+\begin{preview}
+    \begin{equation}
+        \cos \frac{\theta}{2} + (x_l \ii + y_l \jj + z_l \kk) \sin \frac{\theta}{2}
+    \end{equation}
+\end{preview}
+
+% 15
+\begin{preview}
+    \begin{equation}
+        \cos \frac{\theta}{2} + \ii \sin \frac{\theta}{2}
+    \end{equation}
+\end{preview}
+
+% 16
+\begin{preview}
+    \begin{equation}
+        \left( \cos \frac{\theta}{2} + \ii \sin \frac{\theta}{2} \right) \jj \left( \cos \frac{\theta}{2} - \ii \sin \frac{\theta}{2} \right)
+    \end{equation}
+\end{preview}
+
+% 17
+\begin{preview}
+    \begin{align}
+         & \left( \cos \frac{\theta}{2} + \ii \sin \frac{\theta}{2} \right) \jj \left( \cos \frac{\theta}{2} - \ii \sin \frac{\theta}{2} \right)                                           \\
+         & = \jj \cos^2 \frac{\theta}{2} - \jj \ii \cos \frac{\theta}{2} \sin \frac{\theta}{2} + \ii \jj \sin \frac{\theta}{2} \cos \frac{\theta}{2} - \ii \jj \ii \sin^2 \frac{\theta}{2} \\
+         & = \jj \cos^2 \frac{\theta}{2} + \kk \cos \frac{\theta}{2} \sin \frac{\theta}{2} + \kk \cos \frac{\theta}{2} \sin \frac{\theta}{2} - \jj \sin^2 \frac{\theta}{2}                 \\
+         & = \jj \left( \cos^2 \frac{\theta}{2} - \sin^2 \frac{\theta}{2} \right) + \kk \left( 2 \cos \frac{\theta}{2} \sin \frac{\theta}{2} \right)                                       \\
+         & = \jj \cos \theta + \kk \sin \theta
+    \end{align}
+\end{preview}
+
+% 18
+\begin{preview}
+    \begin{equation}
+        \frac{1}{\sqrt{2}} \jj + \frac{1}{\sqrt{2}} \kk = (0.7071 \dots) \jj + (0.7071 \dots) \kk
+    \end{equation}
+\end{preview}
+
+\end{document}
