@@ -1,6 +1,5 @@
 {
     "recommendations": [
-        "negokaz.zenn-editor",
-        "taichi.vscode-textlint"
+        "negokaz.zenn-editor"
     ]
 }
