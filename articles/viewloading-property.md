@@ -7,17 +7,17 @@ published: true
 publication_name: "yumemi_inc"
 ---
 
-iOS 16.4で追加された `@ViewLoading` プロパティラッパについて紹介し、古いOSでも使えるように自前で実装する方法を述べます。
+iOS 16.4 で追加された `@ViewLoading` プロパティラッパについて紹介し、古い OS でも使えるように自前で実装する方法を述べます。
 
 # `@ViewLoading` とは
 
-`@ViewLoading` プロパティラッパは、2023年3月にリリースされたiOS 16.4で追加された機能です。iOSのマイナーバージョンアップでのSDKの機能追加は比較的めずらしいですね。
+`@ViewLoading` プロパティラッパは、2023 年 3 月にリリースされた iOS 16.4 で追加された機能です。iOS のマイナーバージョンアップでの SDK の機能追加は比較的めずらしいですね。
 
 このプロパティラッパのおかげで、`UIViewController` のプロパティが扱いやすくなります。
 
 ## `UIViewController` のプロパティ
 
-次のコードは、Appleのリファレンスドキュメント（[UIViewController.ViewLoading](https://developer.apple.com/documentation/uikit/uiviewcontroller/viewloading)）から流用しています。
+次のコードは、Apple のリファレンスドキュメント（[UIViewController.ViewLoading](https://developer.apple.com/documentation/uikit/uiviewcontroller/viewloading)）から流用しています。
 
 ```swift
 class DateViewController: UIViewController {
@@ -32,9 +32,9 @@ class DateViewController: UIViewController {
 }
 ```
 
-このコードの `dateLabel` プロパティは、`viewDidLoad()` で値を設定したらその後は `nil` になりません。このため、Optional型にするのは冗長に感じられます。できれば非Optional型にしたいです。
+このコードの `dateLabel` プロパティは、`viewDidLoad()` で値を設定したらその後は `nil` になりません。このため、Optional 型にするのは冗長に感じられます。できれば非 Optional 型にしたいです。
 
-しかしプロパティを非Optional型にするためには、Swiftの仕様として、クラスの初期化時にプロパティの値の設定が必要になります。今回のケースでは、初期化時でなく `viewDidLoad()` でプロパティの値を設定しています。このため、Optional型にせざるを得ません。
+しかしプロパティを非 Optional 型にするためには、Swift の仕様として、クラスの初期化時にプロパティの値の設定が必要になります。今回のケースでは、初期化時でなく `viewDidLoad()` でプロパティの値を設定しています。このため、Optional 型にせざるを得ません。
 
 ## `@ViewLoading` プロパティラッパ
 
@@ -53,18 +53,18 @@ class DateViewController: UIViewController {
 }
 ```
 
-`dateLabel` プロパティに `@ViewLoading` プロパティラッパをつけることで、非Optional型で宣言できるようになります。実はプロパティラッパの内部ではOptional型で値を持っています。プロパティへの `get` アクセス時に内部の値をunwrapして返してくれます。
+`dateLabel` プロパティに `@ViewLoading` プロパティラッパをつけることで、非 Optional 型で宣言できるようになります。実はプロパティラッパの内部では Optional 型で値を持っています。プロパティへの `get` アクセス時に内部の値を unwrap して返してくれます。
 
-しかし、`get` アクセス時にまだプロパティの値が設定されていなかったらどうなるのでしょうか。もし内部の値が `nil` だったら、`get` アクセス時のunwrapで実行時エラーとなってしまいそうです。
+しかし、`get` アクセス時にまだプロパティの値が設定されていなかったらどうなるのでしょうか。もし内部の値が `nil` だったら、`get` アクセス時の unwrap で実行時エラーとなってしまいそうです。
 
-ここが `@ViewLoading` プロパティラッパの便利なところです。`get` アクセス時、値を返す前に自動的にViewのロードを行ってくれるのです。
+ここが `@ViewLoading` プロパティラッパの便利なところです。`get` アクセス時、値を返す前に自動的に View のロードを行ってくれるのです。
 
 * `get` アクセス
     * → `loadView()` が実行される
     * → `viewDidLoad()` が実行される
-    * → 内部の値がunwrapして返される
+    * → 内部の値が unwrap して返される
 
-このため、`viewDidLoad()` でプロパティの値を設定するように実装してあれば、`nil` のunwrapになることはありません。
+このため、`viewDidLoad()` でプロパティの値を設定するように実装してあれば、`nil` の unwrap になることはありません。
 
 :::message
 `viewDidLoad()` でプロパティの値を設定し忘れると実行時エラーになりますので注意が必要です。`@ViewLoading` プロパティラッパを指定したプロパティは、`viewDidLoad()` で値を設定するように実装してください。
@@ -72,7 +72,7 @@ class DateViewController: UIViewController {
 
 ## 利用例
 
-実際に、Viewのロード前の時点でプロパティにアクセスするコードの例を見てみましょう。
+実際に、View のロード前の時点でプロパティにアクセスするコードの例を見てみましょう。
 
 ```swift
 class DateViewController: UIViewController {
@@ -88,7 +88,7 @@ class DateViewController: UIViewController {
 
 `date` プロパティの `didSet` の中で `dateLabel` プロパティにアクセスしています。そのため、この時点で `dateLabel` プロパティの値が設定されている必要があります。
 
-しかし次のように `DateViewController` を利用した場合は、`date` へのアクセス時点ではViewのロードが行われていません。
+しかし次のように `DateViewController` を利用した場合は、`date` へのアクセス時点では View のロードが行われていません。
 
 ```swift
 let dateViewController = DateViewController()
@@ -97,11 +97,11 @@ dateViewController.date = Date()
 
 このため `dateLabel` プロパティについて `@ViewLoading` を使っていない場合は実行時エラーになります。一方、`@ViewLoading` を使っている場合は正常に動作します。
 
-ここまでに挙げたコードはAppleのリファレンスドキュメントから流用したものです。ただし、一部変更を加えています。
+ここまでに挙げたコードは Apple のリファレンスドキュメントから流用したものです。ただし、一部変更を加えています。
 
 https://developer.apple.com/documentation/uikit/uiviewcontroller/viewloading
 
-変更した箇所を含めて、改めて全体像を挙げておきます。次のコードはXcode Playgroundで実行できます。
+変更した箇所を含めて、改めて全体像を挙げておきます。次のコードは Xcode Playground で実行できます。
 
 ```swift
 import UIKit
@@ -137,13 +137,13 @@ dateViewController.date = Date()
 
 # `@ViewLoading` を自前で実装する方法
 
-`@ViewLoading` は便利な機能ですが、iOS 16.4以降でしか使えません。そこで、それ以前のバージョンで使うために自前で実装することを考えます。
+`@ViewLoading` は便利な機能ですが、iOS 16.4 以降でしか使えません。そこで、それ以前のバージョンで使うために自前で実装することを考えます。
 
-プロパティラッパはSwiftの言語機能であり自作できます。
+プロパティラッパは Swift の言語機能であり自作できます。
 
 ## リファレンス実装
 
-`@ViewLoading` を実現するには、プロパティへの `get` アクセスに割り込んで `UIViewController` のメソッドを呼び、Viewのロードができれば良いです。
+`@ViewLoading` を実現するには、プロパティへの `get` アクセスに割り込んで `UIViewController` のメソッドを呼び、View のロードができれば良いです。
 
 しかし、通常の方法ではどうも難しいことに気づきます。とくに `UIViewController` のメソッドを呼ぶ手段が分かりません。
 
@@ -153,11 +153,11 @@ https://indiestack.com/2023/04/magic-loading-property-wrappers/
 
 ## プロパティラッパの通常の実装方法
 
-プロパティラッパの実装方法は、Swiftのドキュメントに記載されています。
+プロパティラッパの実装方法は、Swift のドキュメントに記載されています。
 
 https://www.swiftlangjp.com/language-guide/properties.html
 
-次のコード例は、Swiftのドキュメントから引用しています。
+次のコード例は、Swift のドキュメントから引用しています。
 
 ```swift
 @propertyWrapper
@@ -196,7 +196,7 @@ struct EnclosingTypeReferencingWrapper<Value> {
 
 ひとつ制約として、`ReferenceWritableKeyPath` を利用するため、プロパティを含む型が参照型でなくてはなりません。
 
-この実装方法はSwiftのドキュメントには記載されていません。ただ、プロポーザルには記載があります（[SE-0258 Property Wrappers](https://github.com/apple/swift-evolution/blob/main/proposals/0258-property-wrappers.md)）。また、次のブログ記事で詳しく紹介されています。
+この実装方法は Swift のドキュメントには記載されていません。ただ、プロポーザルには記載があります（[SE-0258 Property Wrappers](https://github.com/apple/swift-evolution/blob/main/proposals/0258-property-wrappers.md)）。また、次のブログ記事で詳しく紹介されています。
 
 https://www.swiftbysundell.com/articles/accessing-a-swift-property-wrappers-enclosing-instance/
 
@@ -225,14 +225,14 @@ public struct MagicViewLoading<Value> {
 }
 ```
 
-この構造体の内部プロパティ `stored` へのアクセスでKeyPathが必要になりますが、それ以外はシンプルです。この実装で、以下のような流れになってやりたいことが実現できています。
+この構造体の内部プロパティ `stored` へのアクセスで KeyPath が必要になりますが、それ以外はシンプルです。この実装で、以下のような流れになってやりたいことが実現できています。
 
 * `get` アクセス
     * → `loadViewIfNeeded()` を呼ぶ
     * → `viewDidLoad()` から `set` が呼ばれて `stored` に値が設定される
-    * → 内部の値 `stored` をunwrapして返す
+    * → 内部の値 `stored` を unwrap して返す
 
-先ほどの `DateViewController` に `@MagicViewLoading` を適用してみます。実は上記のコードそのままではビルドできないので、少し変更しています。次のコードはXcode Playgroundで実行できます。
+先ほどの `DateViewController` に `@MagicViewLoading` を適用してみます。実は上記のコードそのままではビルドできないので、少し変更しています。次のコードは Xcode Playground で実行できます。
 
 ```swift
 @propertyWrapper
@@ -275,10 +275,10 @@ https://github.com/danielpunkass/MagicLoading
 
 # まとめ
 
-* iOS 16.4で `@ViewLoading` という便利機能が追加された
+* iOS 16.4 で `@ViewLoading` という便利機能が追加された
 * それ以前のバージョンでも同様の機能の実現が可能
-    * ただしSwiftのドキュメントに記載されていない方法なので注意
+    * ただし Swift のドキュメントに記載されていない方法なので注意
 
-なお、この記事は先日のYUMEMI.grow Mobile #6で発表した内容を整理して記事の形にまとめたものです。
+なお、この記事は先日の YUMEMI.grow Mobile #6 で発表した内容を整理して記事の形にまとめたものです。
 
 https://www.docswell.com/s/usami-k/ZDE96N-at-viewloading-property-wrapper-implementation
