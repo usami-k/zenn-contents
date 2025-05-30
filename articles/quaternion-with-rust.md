@@ -106,7 +106,11 @@ q3 - q4 = 2 + 4 i + -1 j + -4 k
 
 前述のように、クォータニオンの計算は多項式の計算と同様です。それはかけ算でも同じです。多項式のかけ算は、中学で習うように分配法則を使って展開しておこないます。このとき、虚数単位どうしのかけ算が発生します。これはクォータニオンの定義で述べたルールにしたがって計算します。たとえば $\mathtt{i}\mathtt{j} = \mathtt{k}$ などです。
 
+<!-- textlint-disable ja-technical-writing/sentence-length -->
+
 ここで、注意点があります。クォータニオンはかけ算の交換法則が成り立ちません。かけ算の順番を入れ替えると計算結果が変わるのです。これは、虚数単位どうしのかけ算のルールの時点で、$\mathtt{i}\mathtt{j} = \mathtt{k}$、$\mathtt{j}\mathtt{i} = -\mathtt{k}$ などと定義しているためです。実際に結果が変わる計算例を示します。
+
+<!-- textlint-enable ja-technical-writing/sentence-length -->
 
 ![](/images/quaternion-with-rust/quaternion-04.png)
 
@@ -156,7 +160,11 @@ q2 * q1 = 0 + 0 i + 11 j + -2 k
 
 ![](/images/quaternion-with-rust/quaternion-08.png)
 
+<!-- textlint-disable ja-technical-writing/sentence-length -->
+
 この定義を愚直に受け止めれば、$w$、$x$、$y$、$z$ の部分が分数になることは許されますが、虚数単位 $\mathtt{i}$、$\mathtt{j}$、$\mathtt{k}$ が分母分子にくるような形は許されません。
+
+<!-- textlint-enable ja-technical-writing/sentence-length -->
 
 しかし、心配はいりません。実は、クォータニオンをクォータニオンで割る計算は必ず割り切れてクォータニオンになります。有理式を持ち出す必要はないのです。これは、クォータニオンが単なる多項式とは異なるポイントです。
 

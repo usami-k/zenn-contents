@@ -299,8 +299,12 @@ Dfa {
 
 ここで、DFA を拡張した NFA（非決定性有限オートマトン）という概念を導入します。DFA は状態遷移の遷移先が一意的に定まりましたが、NFA は遷移先に複数の候補を許します。さらに、空文字を受け取って遷移する ε-遷移を許します（ε-遷移を許すものをとくに ε-NFA と呼んで区別することもあります）。正規表現を DFA に変換するには、中間に NFA を挟みます。
 
+<!-- textlint-disable ja-technical-writing/no-mix-dearu-desumasu -->
+
 - 正規表現を NFA に変換します。
 - NFA を DFA に変換します。
+
+<!-- textlint-enable ja-technical-writing/no-mix-dearu-desumasu -->
 
 これらの変換について厳密な説明はここではしません。代わりに具体例を見て雰囲気をつかむことにします。正規表現 `a(b|c)+d` を DFA に変換する手順を見てみましょう。
 
