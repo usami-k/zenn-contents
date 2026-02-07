@@ -3,7 +3,7 @@ title: "MP3の文字化けをmutagenのCLIツールで修正する"
 emoji: "💿"
 type: "tech"
 topics: ["Python", "mutagen", "mp3", "id3", "文字化け"]
-published: false
+published: true
 ---
 
 ## 問題の現象
