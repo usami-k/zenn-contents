@@ -3,7 +3,7 @@ title: "バージョン管理システム Jujutsu"
 emoji: "🌿"
 type: "tech"
 topics: ["Jujutsu", "Git", "バージョン管理", "VCS"]
-published: false
+published: true
 ---
 
 Jujutsu（jj）は、近年注目を集めている新しいバージョン管理システムです。この記事では、Gitを使ったことがある人向けにjjの特徴をいくつか紹介します。
