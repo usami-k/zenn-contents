@@ -350,3 +350,9 @@ NotebookLMにjj公式のCLIリファレンス（<https://www.jj-vcs.dev/latest/c
 ## まとめ
 
 新しいバージョン管理システムであるjjを紹介しました。AIエージェントとも相性がよいと感じているので、今後より活用していくつもりです。
+
+## ゆめみよりの紹介
+
+この記事は、技術書典20で頒布中の「ゆめみより '26」に掲載されています。他にもおもしろい記事が載っていますので、ぜひご覧ください。
+
+https://techbookfest.org/product/wwLTtBdeawDv2F4EFn72f
